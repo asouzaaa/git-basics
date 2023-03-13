@@ -1,0 +1,100 @@
+mkdir git-basics //Exercicio 1
+cd git-basics
+git init
+git checkout -b main
+
+touch arquivo1.txt //Exercicio 2
+
+git status //Exercicio 3
+git add arquivo1.txt
+
+git commit -m "Initial commit" //Exercicio 4
+
+touch arquivo2.txt //Exercicio 5
+touch arquivo3.txt
+touch arquivo4.txt
+
+git stash save "Stash 1" //Exercicio 6
+git stash save "Stash 2"
+git stash save "Stash 3"
+
+git stash list //Exercicio 7
+git stash apply stash@{1}
+git status
+git add .
+git commit -m "Comitando o stash 1"
+
+git stash list //Exercicio 8
+git stash apply
+git add .
+git stash apply
+git status
+git add .
+git commit -m "Comitando os stashes restantes"
+
+git remote add origin https://github.com/asouzaaa/git-basics.git //Exercicio 11
+git remote -v
+git push -u origin main
+
+git status //Exercicio 12
+git add .
+
+git log //Exercicio 13
+
+git checkout -b my-primary-branch-1027_ra //Exercicio 14 e 15
+
+git branch //Exercicio 16
+touch novo_arquivo.txt
+git add novo_arquivo.txt
+git commit -m "Adicionando novo_arquivo.txt"
+git push origin my-primary-branch-1027_ra
+
+git checkout main //Exercicio 18
+git pull
+
+git branch //Exercicio 20
+git checkout -b "my-second-branch-1027_ra"
+touch novo_arquivo
+git commit -m "Adicionando segundo arquivo"
+
+git checkout main //Exercicio 22
+git merge 
+
+git branch //Exercicio 23
+git checkout main
+git push origin main
+
+git branch //Exercicio 24
+git checkout -b "my-third-branch-1027_ra"
+touch novo_arquivo
+git add .
+git commit -m "Esta mensagem vai no squash" //Exercicio 25
+
+touch terceiro_arquivo.txt //Exercicio 26
+git add .
+git commit -m "Esta mensagem não vai no squash, mas o arquivo vai"
+
+git branch //Exercicio 27
+git checkout main 
+git merge --squash my-third-branch-1027_ra
+git add .
+git commit -m "Mensagem de commit contendo as alterações de my-third-branch-1027_ra com squash"
+
+git status //Exercicio 28
+git add .
+git commit -m "Mensagem de commit contendo as alterações mescladas na branch main"
+git push origin main
+
+git branch //Exercicio 29
+git checkout my-primary-branch-1027_ra
+git status
+git commit -m "Mensagem de commit das alterações pendentes"
+git pull origin main 
+
+git branch //Exercicio 30
+git checkout my-primary-branch-1027_ra
+git status
+git commit -m "Mensagem de commit das alterações pendentes"
+git push origin my-primary-branch-1027_ra
+
+git clone https://github.com/asouzaaa/git-basics.git //Exercicio 32
